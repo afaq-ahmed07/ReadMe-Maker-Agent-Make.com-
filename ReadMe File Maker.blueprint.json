@@ -1,0 +1,1235 @@
+{
+    "name": "ReadMe File Maker",
+    "flow": [
+        {
+            "id": 5,
+            "module": "github:ActionGetRepository",
+            "version": 4,
+            "parameters": {
+                "__IMTCONN__": 9554602
+            },
+            "mapper": {
+                "name": "MemesShow",
+                "owner": "afaq-ahmed07",
+                "select": "selectFromTheList"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -385,
+                    "y": -9
+                },
+                "restore": {
+                    "expect": {
+                        "name": {
+                            "mode": "chose",
+                            "label": "MemesShow"
+                        },
+                        "forks": {
+                            "mode": "chose"
+                        },
+                        "owner": {
+                            "mode": "edit",
+                            "nested": [
+                                {
+                                    "name": "name",
+                                    "type": "select",
+                                    "label": "Repository Name",
+                                    "options": "rpc://github/4/getRepoName",
+                                    "required": true
+                                }
+                            ]
+                        },
+                        "issues": {
+                            "mode": "chose"
+                        },
+                        "labels": {
+                            "mode": "chose"
+                        },
+                        "select": {
+                            "label": "Select from the List"
+                        },
+                        "packages": {
+                            "mode": "chose"
+                        },
+                        "projects": {
+                            "mode": "chose"
+                        },
+                        "releases": {
+                            "mode": "chose"
+                        },
+                        "watchers": {
+                            "mode": "chose"
+                        },
+                        "languages": {
+                            "mode": "chose"
+                        },
+                        "deployKeys": {
+                            "mode": "chose"
+                        },
+                        "milestones": {
+                            "mode": "chose"
+                        },
+                        "stargazers": {
+                            "mode": "chose"
+                        },
+                        "submodules": {
+                            "mode": "chose"
+                        },
+                        "deployments": {
+                            "mode": "chose"
+                        },
+                        "discussions": {
+                            "mode": "chose"
+                        },
+                        "environments": {
+                            "mode": "chose"
+                        },
+                        "pinnedIssues": {
+                            "mode": "chose"
+                        },
+                        "pullRequests": {
+                            "mode": "chose"
+                        },
+                        "collaborators": {
+                            "mode": "chose"
+                        },
+                        "followRenames": {
+                            "mode": "chose"
+                        },
+                        "commitComments": {
+                            "mode": "chose"
+                        },
+                        "assignableUsers": {
+                            "mode": "chose"
+                        },
+                        "mentionableUsers": {
+                            "mode": "chose"
+                        },
+                        "repositoryTopics": {
+                            "mode": "chose"
+                        },
+                        "pinnedDiscussions": {
+                            "mode": "chose"
+                        },
+                        "vulnerabilityAlerts": {
+                            "mode": "chose"
+                        },
+                        "discussionCategories": {
+                            "mode": "chose"
+                        },
+                        "branchProtectionRules": {
+                            "mode": "chose"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "github2"
+                            },
+                            "label": "My GitHub connection (afaq-ahmed07)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:github2,github",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "select",
+                        "type": "select",
+                        "label": "Enter an Owner and a Repository Name",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "enterManually",
+                                "selectFromTheList"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "followRenames",
+                        "type": "boolean",
+                        "label": "Follow Renames"
+                    },
+                    {
+                        "name": "outputKeys",
+                        "type": "select",
+                        "label": "Output Fields",
+                        "multiple": true,
+                        "validate": {
+                            "enum": [
+                                "autoMergeAllowed",
+                                "codeOfConduct",
+                                "contactLinks",
+                                "fundingLinks",
+                                "interactionAbility",
+                                "latestRelease",
+                                "licenseInfo",
+                                "parent",
+                                "databaseId",
+                                "defaultBranchRef{name prefix}",
+                                "deleteBranchOnMerge",
+                                "diskUsage",
+                                "forkCount",
+                                "forkingAllowed",
+                                "hasIssuesEnabled",
+                                "hasProjectsEnabled",
+                                "hasWikiEnabled",
+                                "isArchived",
+                                "isBlankIssuesEnabled",
+                                "isDisabled",
+                                "isEmpty",
+                                "isFork",
+                                "isInOrganization",
+                                "isLocked",
+                                "isMirror",
+                                "isPrivate",
+                                "isSecurityPolicyEnabled",
+                                "isTemplate",
+                                "isUserConfigurationRepository",
+                                "lockReason",
+                                "mergeCommitAllowed",
+                                "mirrorUrl",
+                                "openGraphImageUrl",
+                                "primaryLanguage{color name}",
+                                "projectsResourcePath",
+                                "projectsUrl",
+                                "rebaseMergeAllowed",
+                                "securityPolicyUrl",
+                                "squashMergeAllowed",
+                                "sshUrl",
+                                "stargazerCount",
+                                "tempCloneToken",
+                                "usesCustomOpenGraphImage",
+                                "viewerCanAdminister",
+                                "viewerCanCreateProjects",
+                                "viewerCanSubscribe",
+                                "viewerCanUpdateTopics",
+                                "viewerDefaultCommitEmail",
+                                "viewerDefaultMergeMethod",
+                                "viewerHasStarred",
+                                "viewerPermission",
+                                "viewerPossibleCommitEmails",
+                                "viewerSubscription",
+                                "visibility"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "assignableUsers",
+                        "type": "boolean",
+                        "label": "Shaw Assignable Users"
+                    },
+                    {
+                        "name": "branchProtectionRules",
+                        "type": "boolean",
+                        "label": "Show Branch Protection Rules"
+                    },
+                    {
+                        "name": "collaborators",
+                        "type": "boolean",
+                        "label": "Show Collaborators"
+                    },
+                    {
+                        "name": "commitComments",
+                        "type": "boolean",
+                        "label": "Show Commit Comments"
+                    },
+                    {
+                        "name": "deployKeys",
+                        "type": "boolean",
+                        "label": "Show Deploy Keys"
+                    },
+                    {
+                        "name": "deployments",
+                        "type": "boolean",
+                        "label": "Show Deployments"
+                    },
+                    {
+                        "name": "discussionCategories",
+                        "type": "boolean",
+                        "label": "Show Discussion Categories"
+                    },
+                    {
+                        "name": "discussions",
+                        "type": "boolean",
+                        "label": "Show Discussions"
+                    },
+                    {
+                        "name": "environments",
+                        "type": "boolean",
+                        "label": "Show Environments"
+                    },
+                    {
+                        "name": "forks",
+                        "type": "boolean",
+                        "label": "Show Forks"
+                    },
+                    {
+                        "name": "issues",
+                        "type": "boolean",
+                        "label": "Show Issues"
+                    },
+                    {
+                        "name": "labels",
+                        "type": "boolean",
+                        "label": "Show Labels"
+                    },
+                    {
+                        "name": "languages",
+                        "type": "boolean",
+                        "label": "Show Languages"
+                    },
+                    {
+                        "name": "mentionableUsers",
+                        "type": "boolean",
+                        "label": "Show Mentionable Users"
+                    },
+                    {
+                        "name": "milestones",
+                        "type": "boolean",
+                        "label": "Show Milestones"
+                    },
+                    {
+                        "name": "packages",
+                        "type": "boolean",
+                        "label": "Show Packages"
+                    },
+                    {
+                        "name": "pinnedDiscussions",
+                        "type": "boolean",
+                        "label": "Show Pinned Discussions"
+                    },
+                    {
+                        "name": "pinnedIssues",
+                        "type": "boolean",
+                        "label": "Show Pinned Issues"
+                    },
+                    {
+                        "name": "projects",
+                        "type": "boolean",
+                        "label": "Show Projects"
+                    },
+                    {
+                        "name": "pullRequests",
+                        "type": "boolean",
+                        "label": "Show Pull Requests"
+                    },
+                    {
+                        "name": "releases",
+                        "type": "boolean",
+                        "label": "Show Releases"
+                    },
+                    {
+                        "name": "repositoryTopics",
+                        "type": "boolean",
+                        "label": "Show Repository Topics"
+                    },
+                    {
+                        "name": "stargazers",
+                        "type": "boolean",
+                        "label": "Show Stargazers"
+                    },
+                    {
+                        "name": "submodules",
+                        "type": "boolean",
+                        "label": "Show Submodules"
+                    },
+                    {
+                        "name": "vulnerabilityAlerts",
+                        "type": "boolean",
+                        "label": "Show Vulnerability Alerts"
+                    },
+                    {
+                        "name": "watchers",
+                        "type": "boolean",
+                        "label": "Show Watchers"
+                    },
+                    {
+                        "mode": "edit",
+                        "name": "owner",
+                        "type": "select",
+                        "label": "Owner",
+                        "required": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "select",
+                        "label": "Repository Name",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 6,
+            "module": "http:ActionSendData",
+            "version": 3,
+            "parameters": {
+                "handleErrors": true,
+                "useNewZLibDeCompress": true
+            },
+            "mapper": {
+                "ca": "",
+                "qs": [],
+                "url": "https://api.github.com/repos/{{5.nameWithOwner}}/contents/",
+                "data": "",
+                "gzip": true,
+                "method": "get",
+                "headers": [
+                    {
+                        "name": "Authorization",
+                        "value": "token <GIT TOKEN>"
+                    },
+                    {
+                        "name": "User-Agent",
+                        "value": "{{5.owner.login}}"
+                    }
+                ],
+                "timeout": "",
+                "useMtls": false,
+                "authPass": "",
+                "authUser": "",
+                "bodyType": "raw",
+                "contentType": "application/json",
+                "serializeUrl": false,
+                "shareCookies": false,
+                "parseResponse": true,
+                "followRedirect": true,
+                "useQuerystring": false,
+                "followAllRedirects": false,
+                "rejectUnauthorized": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": -85,
+                    "y": -9
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "GET"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null,
+                                null
+                            ]
+                        },
+                        "bodyType": {
+                            "label": "Raw"
+                        },
+                        "contentType": {
+                            "label": "JSON (application/json)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    },
+                    {
+                        "name": "useNewZLibDeCompress",
+                        "type": "hidden"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "get",
+                                "head",
+                                "post",
+                                "put",
+                                "patch",
+                                "delete",
+                                "options"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "validate": {
+                            "enum": [
+                                "raw",
+                                "x_www_form_urlencoded",
+                                "multipart_form_data"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseResponse",
+                        "type": "boolean",
+                        "label": "Parse response",
+                        "required": true
+                    },
+                    {
+                        "name": "authUser",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "authPass",
+                        "type": "password",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "uinteger",
+                        "label": "Timeout",
+                        "validate": {
+                            "max": 300,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    },
+                    {
+                        "name": "ca",
+                        "type": "cert",
+                        "label": "Self-signed certificate"
+                    },
+                    {
+                        "name": "rejectUnauthorized",
+                        "type": "boolean",
+                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                        "required": true
+                    },
+                    {
+                        "name": "followRedirect",
+                        "type": "boolean",
+                        "label": "Follow redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "useQuerystring",
+                        "type": "boolean",
+                        "label": "Disable serialization of multiple same query string keys as arrays",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    },
+                    {
+                        "name": "useMtls",
+                        "type": "boolean",
+                        "label": "Use Mutual TLS",
+                        "required": true
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "select",
+                        "label": "Content type",
+                        "validate": {
+                            "enum": [
+                                "text/plain",
+                                "application/json",
+                                "application/xml",
+                                "text/xml",
+                                "text/html",
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Request content"
+                    },
+                    {
+                        "name": "followAllRedirects",
+                        "type": "boolean",
+                        "label": "Follow all redirect",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 7,
+            "module": "builtin:BasicFeeder",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "array": "{{6.data}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 215,
+                    "y": -9
+                },
+                "restore": {
+                    "expect": {
+                        "array": {
+                            "mode": "edit"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "mode": "edit",
+                        "name": "array",
+                        "spec": [],
+                        "type": "array",
+                        "label": "Array"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 22,
+            "module": "http:ActionGetFile",
+            "version": 3,
+            "parameters": {
+                "handleErrors": false
+            },
+            "filter": {
+                "name": "Only_Files",
+                "conditions": [
+                    [
+                        {
+                            "a": "{{7.type}}",
+                            "b": "file",
+                            "o": "text:equal"
+                        }
+                    ]
+                ]
+            },
+            "mapper": {
+                "url": "{{7.download_url}}",
+                "method": "get",
+                "serializeUrl": false,
+                "shareCookies": false
+            },
+            "metadata": {
+                "designer": {
+                    "x": 575,
+                    "y": -18
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "hidden",
+                        "label": "Method"
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 23,
+            "module": "util:TextAggregator",
+            "version": 1,
+            "parameters": {
+                "feeder": 22,
+                "rowSeparator": "\t"
+            },
+            "mapper": {
+                "value": "{{22.data}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 965,
+                    "y": -16
+                },
+                "restore": {
+                    "extra": {
+                        "feeder": {
+                            "label": "HTTP - Get a file [22]"
+                        }
+                    },
+                    "parameters": {
+                        "rowSeparator": {
+                            "label": "Tab"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "rowSeparator",
+                        "type": "select",
+                        "label": "Row separator",
+                        "validate": {
+                            "enum": [
+                                "\n",
+                                "\t",
+                                "other"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "value",
+                        "type": "text",
+                        "label": "Text"
+                    }
+                ],
+                "advanced": true
+            }
+        },
+        {
+            "id": 34,
+            "module": "json:CreateJSON",
+            "version": 1,
+            "parameters": {
+                "type": 346694,
+                "space": ""
+            },
+            "mapper": {
+                "model": "mistralai/mistral-7b-instruct",
+                "messages": [
+                    {
+                        "role": "system",
+                        "content": "You are a professional documentation writer."
+                    },
+                    {
+                        "role": "user",
+                        "content": "Please write a professional README.md based on these files text. Mention the features, short description and installation setup for this:\\n\\n{{23.text}}"
+                    }
+                ]
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1323,
+                    "y": -16
+                },
+                "restore": {
+                    "expect": {
+                        "messages": {
+                            "mode": "chose",
+                            "items": [
+                                null,
+                                null
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "type": {
+                            "label": "My data structure"
+                        },
+                        "space": {
+                            "label": "Empty"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "type",
+                        "type": "udt",
+                        "label": "Data structure",
+                        "required": true
+                    },
+                    {
+                        "name": "space",
+                        "type": "select",
+                        "label": "Indentation",
+                        "validate": {
+                            "enum": [
+                                "tab",
+                                "2",
+                                "4"
+                            ]
+                        }
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "text",
+                        "label": null
+                    },
+                    {
+                        "name": "messages",
+                        "spec": {
+                            "name": "value",
+                            "spec": [
+                                {
+                                    "name": "role",
+                                    "type": "text",
+                                    "label": null
+                                },
+                                {
+                                    "name": "content",
+                                    "type": "text",
+                                    "label": null
+                                }
+                            ],
+                            "type": "collection"
+                        },
+                        "type": "array",
+                        "label": null
+                    }
+                ]
+            }
+        },
+        {
+            "id": 29,
+            "module": "http:ActionSendData",
+            "version": 3,
+            "parameters": {
+                "handleErrors": true,
+                "useNewZLibDeCompress": true
+            },
+            "mapper": {
+                "ca": "",
+                "qs": [],
+                "url": "https://openrouter.ai/api/v1/chat/completions",
+                "data": "{{34.json}}",
+                "gzip": true,
+                "method": "post",
+                "headers": [
+                    {
+                        "name": "Authorization",
+                        "value": "Bearer <OPENROUTER API KEY>"
+                    },
+                    {
+                        "name": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "timeout": "",
+                "useMtls": false,
+                "authPass": "",
+                "authUser": "",
+                "bodyType": "raw",
+                "contentType": "application/json",
+                "serializeUrl": false,
+                "shareCookies": false,
+                "parseResponse": true,
+                "followRedirect": true,
+                "useQuerystring": false,
+                "followAllRedirects": false,
+                "rejectUnauthorized": true
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1645,
+                    "y": -17
+                },
+                "restore": {
+                    "expect": {
+                        "qs": {
+                            "mode": "chose"
+                        },
+                        "method": {
+                            "mode": "chose",
+                            "label": "POST"
+                        },
+                        "headers": {
+                            "mode": "chose",
+                            "items": [
+                                null,
+                                null
+                            ]
+                        },
+                        "bodyType": {
+                            "label": "Raw"
+                        },
+                        "contentType": {
+                            "label": "JSON (application/json)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "handleErrors",
+                        "type": "boolean",
+                        "label": "Evaluate all states as errors (except for 2xx and 3xx )",
+                        "required": true
+                    },
+                    {
+                        "name": "useNewZLibDeCompress",
+                        "type": "hidden"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "url",
+                        "type": "url",
+                        "label": "URL",
+                        "required": true
+                    },
+                    {
+                        "name": "serializeUrl",
+                        "type": "boolean",
+                        "label": "Serialize URL",
+                        "required": true
+                    },
+                    {
+                        "name": "method",
+                        "type": "select",
+                        "label": "Method",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "get",
+                                "head",
+                                "post",
+                                "put",
+                                "patch",
+                                "delete",
+                                "options"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "headers",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Headers"
+                    },
+                    {
+                        "name": "qs",
+                        "spec": [
+                            {
+                                "name": "name",
+                                "type": "text",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "name": "value",
+                                "type": "text",
+                                "label": "Value"
+                            }
+                        ],
+                        "type": "array",
+                        "label": "Query String"
+                    },
+                    {
+                        "name": "bodyType",
+                        "type": "select",
+                        "label": "Body type",
+                        "validate": {
+                            "enum": [
+                                "raw",
+                                "x_www_form_urlencoded",
+                                "multipart_form_data"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "parseResponse",
+                        "type": "boolean",
+                        "label": "Parse response",
+                        "required": true
+                    },
+                    {
+                        "name": "authUser",
+                        "type": "text",
+                        "label": "User name"
+                    },
+                    {
+                        "name": "authPass",
+                        "type": "password",
+                        "label": "Password"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "uinteger",
+                        "label": "Timeout",
+                        "validate": {
+                            "max": 300,
+                            "min": 1
+                        }
+                    },
+                    {
+                        "name": "shareCookies",
+                        "type": "boolean",
+                        "label": "Share cookies with other HTTP modules",
+                        "required": true
+                    },
+                    {
+                        "name": "ca",
+                        "type": "cert",
+                        "label": "Self-signed certificate"
+                    },
+                    {
+                        "name": "rejectUnauthorized",
+                        "type": "boolean",
+                        "label": "Reject connections that are using unverified (self-signed) certificates",
+                        "required": true
+                    },
+                    {
+                        "name": "followRedirect",
+                        "type": "boolean",
+                        "label": "Follow redirect",
+                        "required": true
+                    },
+                    {
+                        "name": "useQuerystring",
+                        "type": "boolean",
+                        "label": "Disable serialization of multiple same query string keys as arrays",
+                        "required": true
+                    },
+                    {
+                        "name": "gzip",
+                        "type": "boolean",
+                        "label": "Request compressed content",
+                        "required": true
+                    },
+                    {
+                        "name": "useMtls",
+                        "type": "boolean",
+                        "label": "Use Mutual TLS",
+                        "required": true
+                    },
+                    {
+                        "name": "contentType",
+                        "type": "select",
+                        "label": "Content type",
+                        "validate": {
+                            "enum": [
+                                "text/plain",
+                                "application/json",
+                                "application/xml",
+                                "text/xml",
+                                "text/html",
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "data",
+                        "type": "buffer",
+                        "label": "Request content"
+                    },
+                    {
+                        "name": "followAllRedirects",
+                        "type": "boolean",
+                        "label": "Follow all redirect",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 28,
+            "module": "google-drive:createAFileFromText",
+            "version": 4,
+            "parameters": {
+                "__IMTCONN__": 9554291
+            },
+            "mapper": {
+                "name": "Readme",
+                "content": "{{29.data.choices[].message.content}}",
+                "convert": false,
+                "folderId": "/1Jb6eJ1e3_0-NaNbMxinsGhj34yx-yNLQ",
+                "destination": "drive"
+            },
+            "metadata": {
+                "designer": {
+                    "x": 1958,
+                    "y": -23
+                },
+                "restore": {
+                    "expect": {
+                        "folderId": {
+                            "mode": "chose",
+                            "path": [
+                                "LSTM_Poetry_Model"
+                            ]
+                        },
+                        "destination": {
+                            "label": "My Drive"
+                        }
+                    },
+                    "parameters": {
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google-restricted"
+                            },
+                            "label": "My Google Restricted connection (f219298@cfd.nu.edu.pk)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google-restricted",
+                        "label": "Connection",
+                        "required": true
+                    }
+                ],
+                "expect": [
+                    {
+                        "type": "hidden"
+                    },
+                    {
+                        "name": "destination",
+                        "type": "select",
+                        "label": "Choose a Drive",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "drive",
+                                "share",
+                                "team"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "name",
+                        "type": "text",
+                        "label": "File Name",
+                        "required": true
+                    },
+                    {
+                        "name": "content",
+                        "type": "text",
+                        "label": "File Content",
+                        "required": true
+                    },
+                    {
+                        "name": "convert",
+                        "type": "boolean",
+                        "label": "Convert the File to Google Docs Document",
+                        "required": true
+                    },
+                    {
+                        "name": "folderId",
+                        "type": "folder",
+                        "label": "New Text File Location",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu2.make.com",
+        "notes": []
+    }
+}
